@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,7 +13,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Special Elite', 'Clicker Script', 'Montserrat', sans-serif;
   &:before{
     content:'';
     content: "";
@@ -68,7 +73,7 @@ a {
     color-scheme: dark;
   }
   body {
-    color: white;
-    background: black;
+    color: black;
+    background: white;
   }
 }

@@ -40,7 +40,7 @@ export const getPosts = async () => {
 export const getPostDetails = async (slug) => {
   const query = gql`
     query GetPostDetails($slug: String!) {
-      post(where: { slug: $slug}) {
+      post(where: { slug: $slug }) {
         author {
           bio
           id
@@ -128,4 +128,12 @@ export const getCategories = async () => {
 
   const result = await request(graphqlAPI, query);
   return result.categories;
+};
+
+export const submitComment = async (commentObj) => {
+  const result = await fetch("/api/comments", {
+    method: "POST",
+    body: JSON.stringify(commentObj),
+  });
+  return result.json();
 };

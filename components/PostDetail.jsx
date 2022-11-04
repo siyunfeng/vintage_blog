@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment';
 
 function PostDetail({ post }) {
+  // convert the children (content from the instance in database(Hygraph/GrahpQL)) into JSX
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
 
@@ -74,8 +75,8 @@ function PostDetail({ post }) {
         </div>
         </div>
         {/* {console.log(post.content.raw)} */}
-        {/* post.content.raw includes every element as arrays in the single post content(imageUrl, text, link, etc.) */}
-        <div className="py-2">
+        {/* post.content.raw includes every element as arrays in the single post content(imageUrl, text, etc.(links are excluded for now)) */}
+        <div className="p-4">
           {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))
             return getContentFragment(index, children, typeObj, typeObj.type)

@@ -9,6 +9,7 @@ import {
   CommentsForm,
 } from "../../components";
 
+// passing post, author, slug and categories as props to the functional components
 function PostDetails({ post }) {
   return (
     <div className="container mx-auto px-10 mb-8">

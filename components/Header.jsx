@@ -1,9 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-
-const categories = [{name: 'React', slug: 'react'}, {name: 'Web Development', slug: 'web-dev'}]
+import { getCategories } from '../services';
 
 function Header() {
+    const [ categories, setCategories ] = useState([]);
+    
+    useEffect(()=> {
+      getCategories().then((newCategories) => setCategories(newCategories))
+    }, [])
+    
   return (
     <div className='container mx-auto mb-8 px-10'>
         {/* py: padding vertical axis */}

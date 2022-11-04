@@ -14,7 +14,7 @@ function PostCard({ post }) {
     </div>
     <h1 className="transition duration-400 text-center mb-8 cursor-pointer
     hover:text-gray-600 text-3xl font-semibold">
-      <Link href={`/post/${post.slug}`}>
+      <Link href={`/post/${post.slug}`} key={post.title}>
         {post.title}
       </Link>
     </h1>
@@ -41,7 +41,7 @@ function PostCard({ post }) {
       {post.excerpt}
       </p>
       <div className="text-right">
-        <Link href={`/post/${post.slug}`}>
+        <Link href={`/post/${post.slug}`} key={post.title}>
           <span className="transition duration-400 ease transform hover:-translate-y-1.5 inline-block bg-yellow-500 text-sm font-light rounded-full text-white px-8 py-3 cursor-pointer">
             Continue Reading
           </span>

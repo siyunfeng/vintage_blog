@@ -13,7 +13,7 @@ function PostCard({ post }) {
       />
     </div>
     <h1 className="transition duration-400 text-center mb-8 cursor-pointer
-    hover:text-gray-600 text-3xl font-semibold">
+    hover:text-yellow-700 text-3xl font-semibold">
       <Link href={`/post/${post.slug}`} key={post.title}>
         {post.title}
       </Link>
@@ -37,7 +37,7 @@ function PostCard({ post }) {
         </span>
       </div>
     </div>
-    <p className="text-center text-lg font-normal px-4 lg:px-20 mb-8">
+    <p className="text-left text-lg font-normal px-4 lg:px-20 mb-8">
       {post.excerpt}
       </p>
       <div className="text-right">

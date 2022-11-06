@@ -7,13 +7,12 @@ We can send the data to the hygraph and it will update the database and publish 
 import { GraphQLClient, gql } from "graphql-request";
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
+const graphqlToken = process.env.GRAPHCMS_TOKEN;
 
 export default async function comments(req, res) {
-  const { name, email, slug, comment } = req.body;
-
   const graphQLClient = new GraphQLClient(graphqlAPI, {
     headers: {
-      authorization: `Bearer ${process.env.GRAPHCMS_TOKEN}`,
+      authorization: `Bearer ${graphqlToken}`,
     },
   });
 
@@ -42,5 +41,6 @@ export default async function comments(req, res) {
     res.status(200).send(result);
   } catch (error) {
     console.log(error);
+    res.status(500).send(error);
   }
 }

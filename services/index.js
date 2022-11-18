@@ -155,3 +155,7 @@ export const getComments = async (slug) => {
   const result = await request(graphqlAPI, query, { slug });
   return result.comments;
 };
+
+export const getFreaturedPosts = async () => {
+  return "getFreaturedPosts";
+};

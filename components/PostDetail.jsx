@@ -76,7 +76,7 @@ function PostDetail({ post }) {
         </div>
         {/* {console.log(post.content.raw)} */}
         {/* post.content.raw includes every element as arrays in the single post content(imageUrl, text, etc.(links are excluded for now)) */}
-        <div className="p-4">
+        <div className="p-4 content">
           {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))
             return getContentFragment(index, children, typeObj, typeObj.type)

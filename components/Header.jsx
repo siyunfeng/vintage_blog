@@ -11,12 +11,10 @@ function Header() {
     
   return (
     <div className='container mx-auto mb-8 px-10'>
-        {/* py: padding vertical axis */}
+        {/* py: padding vertical axis; md: medium devices; xl: extra large*/}
         <div className='border-b-2 w-full inline-block border-yellow-800 py-8'>
-            {/* md: medium devices */}
             <div className='md:float-left block'>
                 <Link href='/'>
-                    {/* xl: extra large */}
                     <span className='cursor-pointer font-bold text-5xl text-black'>
                          Vintage Blog
                     </span>

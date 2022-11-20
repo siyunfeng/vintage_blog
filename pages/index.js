@@ -1,23 +1,21 @@
 import Head from 'next/head';
-import { PostCard, Categories, PostWidget, Carousel } from '../components';
-import { getPosts } from '../services';
-// import { FeaturedPosts } from "../sections";
+import {
+  PostCard,
+  Categories,
+  PostWidget,
+  FeaturedPostCard,
+} from '../components';
+import { getPosts, getFreaturedPosts } from '../services';
+import { FeaturedPosts } from '../sections';
 
-export default function Home({ posts }) {
+export default function Home({ posts, featuredPosts }) {
   return (
-    // <div className={styles.container}>
-    // mx: margin horizontal axis; px: padding horizontal axis; mb: margin bottom
-    // {styles.container}
+    // mx: margin horizontal axis; px: padding horizontal axis; mb: margin bottom; col: column; lg: large
     <div className="container mx-auto px-10 mb-8">
-      {/* <FeaturedPosts /> */}
-      <div className="carousel mb-10">
-        <Carousel />
-      </div>
-      {/* col: column; lg: large */}
-      {/* {styles.grid} */}
+      <FeaturedPostCard featuredPosts={featuredPosts} />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8 col-span-1">
-          {posts.map((post) => (
+          {posts.reverse().map((post) => (
             <PostCard post={post.node} key={post.title} />
           ))}
         </div>
@@ -35,7 +33,8 @@ export default function Home({ posts }) {
 // fetch data using getStaticProps in next.js:
 export async function getStaticProps() {
   const posts = (await getPosts()) || [];
+  const featuredPosts = (await getFreaturedPosts()) || [];
   return {
-    props: { posts },
+    props: { posts, featuredPosts },
   };
 }

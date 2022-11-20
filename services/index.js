@@ -1,4 +1,4 @@
-import { request, gql } from "graphql-request";
+import { request, gql } from 'graphql-request';
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
@@ -131,10 +131,10 @@ export const getCategories = async () => {
 };
 
 export const submitComment = async (commentObj) => {
-  const result = await fetch("/api/comments", {
-    method: "POST",
+  const result = await fetch('/api/comments', {
+    method: 'POST',
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify(commentObj),
   });
@@ -157,5 +157,31 @@ export const getComments = async (slug) => {
 };
 
 export const getFreaturedPosts = async () => {
-  return "getFreaturedPosts";
+  const query = gql`
+    query GetFeaturedPosts {
+      postsConnection(where: { featuredPost: true }) {
+        edges {
+          node {
+            author {
+              id
+              name
+              photo {
+                url
+              }
+            }
+            featuredImage {
+              url
+            }
+            createdAt
+            slug
+            title
+          }
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query);
+  // console.log('featuredPosts result >>>>', result.postsConnection.edges);
+  return result.postsConnection.edges;
 };

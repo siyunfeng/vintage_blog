@@ -6,7 +6,6 @@ import moment from 'moment/moment';
 
 function FeaturedPostCard({ featuredPosts }) {
     const posts = featuredPosts;
-    console.log('post in FeaturedPostCard post =', posts)
     return (<div id="carouselExampleIndicators" className="carousel slide relative mb-10" data-bs-ride="carousel">
         <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
             {posts.map((featuredPost, index) => {

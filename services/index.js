@@ -210,6 +210,6 @@ export const getPostsByCategory = async (slug) => {
   `;
 
   const result = await request(graphqlAPI, query, { slug });
-  console.log('RESULT result =', result.posts);
+  // console.log('RESULT result =', result.posts);
   return result.posts;
 };

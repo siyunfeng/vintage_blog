@@ -159,29 +159,57 @@ export const getComments = async (slug) => {
 export const getFreaturedPosts = async () => {
   const query = gql`
     query GetFeaturedPosts {
-      postsConnection(where: { featuredPost: true }) {
-        edges {
-          node {
-            author {
-              id
-              name
-              photo {
-                url
-              }
-            }
-            featuredImage {
-              url
-            }
-            createdAt
-            slug
-            title
+      posts(where: { featuredPost: true }) {
+        author {
+          id
+          name
+          photo {
+            url
           }
         }
+        featuredImage {
+          url
+        }
+        createdAt
+        slug
+        title
       }
     }
   `;
 
   const result = await request(graphqlAPI, query);
   // console.log('featuredPosts result >>>>', result.postsConnection.edges);
-  return result.postsConnection.edges;
+  return result.posts;
+};
+
+export const getPostsByCategory = async (slug) => {
+  const query = gql`
+    query GetPostsByCategory($slug: String!) {
+      posts(where: { categories_some: { slug: $slug } }) {
+        author {
+          bio
+          name
+          id
+          photo {
+            url
+          }
+        }
+        createdAt
+        slug
+        title
+        excerpt
+        featuredImage {
+          url
+        }
+        categories {
+          name
+          slug
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query, { slug });
+  console.log('RESULT result =', result.posts);
+  return result.posts;
 };

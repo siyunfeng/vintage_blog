@@ -41,34 +41,38 @@ function FeaturedPostCard({ posts }) {
             return (
               <div className="carousel-item active float-left w-full">
                 <Link href={`/post/${post.slug}`} key={post.title}>
+                  <h3 className="bg-yellow-800/90 text-white text-center py-2 text-2xl">
+                    {post.title}
+                  </h3>
+                </Link>
+                <Link href={`/post/${post.slug}`} key={post.title}>
                   <img
                     src={post.featuredImage.url}
-                    className="block mx-auto width-50%"
+                    className="block mx-auto width-50% shadow-xl"
                     alt={post.title}
                     height="600"
                     width="800"
                   />
                 </Link>
-                <h3 className="bg-yellow-800/90 text-white text-center pb-8">
-                  {post.title}
-                </h3>
               </div>
             );
           } else {
             return (
               <div className="carousel-item float-left w-full">
                 <Link href={`/post/${post.slug}`} key={post.title}>
+                  <h3 className="bg-yellow-800/90 text-white text-center py-2 text-2xl">
+                    {post.title}
+                  </h3>
+                </Link>
+                <Link href={`/post/${post.slug}`} key={post.title}>
                   <img
                     src={post.featuredImage.url}
-                    className="block mx-auto width-50%"
+                    className="block mx-auto width-50% shadow-xl"
                     alt={post.title}
                     height="600"
                     width="800"
                   />
                 </Link>
-                <h3 className="bg-yellow-800/90 text-white text-center pb-8">
-                  {post.title}
-                </h3>
               </div>
             );
           }

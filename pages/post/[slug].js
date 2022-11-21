@@ -1,5 +1,5 @@
-import React from "react";
-import { getPosts, getPostDetails } from "../../services";
+import React from 'react';
+import { getPosts, getPostDetails } from '../../services';
 import {
   PostDetail,
   Categories,
@@ -7,7 +7,7 @@ import {
   Author,
   Comments,
   CommentsForm,
-} from "../../components";
+} from '../../components';
 
 // passing post, author, slug and categories as props to the functional components
 function PostDetails({ post }) {
@@ -34,8 +34,6 @@ function PostDetails({ post }) {
   );
 }
 
-export default PostDetails;
-
 // fetch data using getStaticProps in next.js:
 export async function getStaticProps({ params }) {
   const data = await getPostDetails(params.slug);
@@ -51,3 +49,5 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
+
+export default PostDetails;

@@ -81,9 +81,14 @@ a {
   }
 }
 
+#main-title {
+  font-family: 'Rye', sans-serif;
+  text-shadow: 10em;
+}
+
 .content {
-  font-family: 'Alegreya', 'Old Standard TT', 'Roboto Mono', sans-serif;
-  font-size: 15pt;
+  font-family: 'Old Standard TT', 'Roboto Mono', sans-serif;
+  font-size: 14pt;
 }
 
 /* Carousel - Featured Posts */

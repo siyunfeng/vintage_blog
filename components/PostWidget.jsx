@@ -26,11 +26,11 @@ function PostWidget({ categories, slug }) {
         <div key={post.title} className="flex item-center w-full mb-4">
           <div className="w-16 flex-none">
             <img 
-              className="align-middle rounded-full"
+              className="align-middle rounded-full object-cover"
               src={post.featuredImage.url}
               alt={post.title}
-              height="60px"
-              width="60px"
+              // height="60px"
+              // width="60px"
             />
           </div>
           <div className="flex-grow ml-4">

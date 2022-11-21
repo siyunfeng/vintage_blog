@@ -7,12 +7,14 @@ import {
 } from '../components';
 import { getPosts, getFreaturedPosts } from '../services';
 import { FeaturedPosts } from '../sections';
+import Carousel from '../components/Carousel';
 
 export default function Home({ posts, featuredPosts }) {
   return (
     // mx: margin horizontal axis; px: padding horizontal axis; mb: margin bottom; col: column; lg: large
     <div className="container mx-auto px-10 mb-8">
-      <FeaturedPostCard featuredPosts={featuredPosts} />
+      {/* <FeaturedPostCard featuredPosts={featuredPosts} /> */}
+      <Carousel featuredPosts={featuredPosts} />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8 col-span-1">
           {posts.reverse().map((post) => (

@@ -1,7 +1,7 @@
 Website: Vintage Blog
 
 Author: 
-[Siyun Feng](https://www.linkedin.com/in/siyunfeng)
+- [Siyun Feng](https://www.linkedin.com/in/siyunfeng)
 
 Techniques:
 - Next.js

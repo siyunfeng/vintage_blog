@@ -1,14 +1,11 @@
-Async Week Project - Vintage Blog
-
-Intro Video:
-https://youtu.be/4gpzRYV8tog
+Website: Vintage Blog
 
 Techniques:
-Next.js - https://nextjs.org/docs/getting-started
-Hygraph - https://app.hygraph.com/
-Tailwind CSS - https://tailwindcss.com/docs/installation
-Moment.js - https://momentjs.com/
+- Next.js
+- Hygraph
+- Tailwind CSS
+- Moment.js
 
-Database:
-Harlow Darling - https://harlowdarling.com/
-Amy May - https://missamymay.com/
+Data Resource:
+- Harlow Darling(https://harlowdarling.com)
+- Amy May(https://missamymay.com)

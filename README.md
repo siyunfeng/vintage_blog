@@ -7,5 +7,5 @@ Techniques:
 - Moment.js
 
 Data Resource:
-- Harlow Darling(https://harlowdarling.com)
-- Amy May(https://missamymay.com)
+- [Harlow Darling](https://harlowdarling.com)
+- [Amy May](https://missamymay.com)

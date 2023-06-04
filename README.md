@@ -1,16 +1,14 @@
 ![](Vintager-README-banner.png)
 
-Website: [Vintager](https://vintager.onrender.com)
+# [Vintager](https://vintager.onrender.com)
 
 Vintager is a solo project that I used to learn Next.js and GraphQL. It is a vintage fashion blog that utilizes Hygraph for data storage and GraphQL for querying. To maintain quality content, visitor comments undergo admin approval before being displayed.
 
----
-
-### Contributor
+## Contributor
 
 - [Siyun Feng](https://www.linkedin.com/in/siyunfeng)
 
-### Technologies
+## Technologies
 
 - Next.js
 - GraphQL
@@ -19,7 +17,7 @@ Vintager is a solo project that I used to learn Next.js and GraphQL. It is a vin
 - Tailwind CSS
 - Moment.js
 
-### Data Source
+## Data Source
 
 - [Harlow Darling](https://harlowdarling.com)
 - [Amy May](https://missamymay.com)

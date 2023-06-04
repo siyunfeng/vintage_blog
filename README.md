@@ -2,25 +2,24 @@
 
 Website: [Vintager](https://vintager.onrender.com)
 
-A blog about vintage fashion built using Next.js. Data is stored in Hygraph and queried using GraphQL. Visitors can submit comments which need to be approved by the admin before they are visible.
+Vintager is a solo project that I used to learn Next.js and GraphQL. It is a vintage fashion blog that utilizes Hygraph for data storage and GraphQL for querying. To maintain quality content, visitor comments undergo admin approval before being displayed.
 
 ---
 
-Author:
+### Contributor
 
 - [Siyun Feng](https://www.linkedin.com/in/siyunfeng)
 
-Techniques:
+### Technologies
 
 - Next.js
-- React
 - GraphQL
 - Hygraph
 - Sass
 - Tailwind CSS
 - Moment.js
 
-Data Resource:
+### Data Source
 
 - [Harlow Darling](https://harlowdarling.com)
 - [Amy May](https://missamymay.com)
